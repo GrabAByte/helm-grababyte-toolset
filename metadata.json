@@ -1,0 +1,10 @@
+{
+  "charts": {
+    "alpine-containerd-toolset": {
+      "version": "0.0.1"
+    },
+    "ubuntu-devops-toolset": {
+      "version": "0.0.1"
+    }
+  }
+}
