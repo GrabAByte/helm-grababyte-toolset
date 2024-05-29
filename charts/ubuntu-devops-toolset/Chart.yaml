@@ -3,8 +3,8 @@ apiVersion: v2
 name: ubuntu-devops-toolset
 description: ubuntu-devops-toolset is an Ubuntu 24.04 based image containing DevOps tooling
 type: application
-version: 0.3.1
-appVersion: 0.0.1
+version: 0.0.1
+appVersion: 0.3.1
 keywords:
   - containerd
 sources:
