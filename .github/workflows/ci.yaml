@@ -7,7 +7,7 @@ name: CI
       - main
 
 jobs:
-  lint:
+  helmlint:
     strategy:
       matrix:
         chart: [alpine-containerd-toolset,ubuntu-devops-toolset]
@@ -18,12 +18,13 @@ jobs:
     strategy:
       matrix:
         chart: [alpine-containerd-toolset,ubuntu-devops-toolset]
+        env: [development,staging,production]
     uses: GrabAByte/github-devops-workflows/.github/workflows/helmTemplate.yml@0.7.0
     with:
       chartPath: "charts/${{ matrix.chart }}"
       releaseName: "${{ matrix.chart }}"
-      valuesPath: "charts/${{ matrix.chart }}/values.yaml"
-    needs: lint
+      valuesPath: "charts/${{ matrix.chart }}/test/{{ matrix.env }}.values.yaml"
+    needs: helmlint
   release:
     uses: GrabAByte/github-devops-workflows/.github/workflows/helmRelease.yml@0.7.0
     needs: template
