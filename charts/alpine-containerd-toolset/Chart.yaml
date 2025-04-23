@@ -3,8 +3,8 @@ apiVersion: v2
 name: alpine-containerd-toolset
 description: alpine-containerd-toolset is lightweight image with containerd compatible tooling
 type: application
-version: 0.0.1
-appVersion: 0.2.1
+version: 0.0.2
+appVersion: 0.4.0
 keywords:
   - containerd
 sources:
@@ -19,4 +19,4 @@ annotations:
       url: https://github.com/GrabAByte/helm-grababyte-toolset/tree/main/charts/alpine-containerd-toolset
   artifacthub.io/images: |
     - name: alpine-containerd-toolset
-      image: alpine-containerd-toolset:0.2.1
+      image: alpine-containerd-toolset:0.4.0
